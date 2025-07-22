@@ -1,0 +1,8 @@
+#root {
+    height: inherit;
+    width: 100%;
+}
+
+#root > .ant-layout {
+    height: inherit;
+}
