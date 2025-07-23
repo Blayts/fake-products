@@ -1,15 +1,13 @@
 import { } from 'react';
-import { RouterProvider } from 'react-router';
-import { Button, Col, Layout, Row, theme } from 'antd';
+import { Outlet } from 'react-router';
+import { Col, Layout, Row, theme } from 'antd';
 import { MehOutlined } from '@ant-design/icons';
 import './App.css';
 import { NavigationMenu } from './components/NavigationMenu';
-import router from './routes';
 
-const { Content, Footer, Header, Sider } = Layout;
+const { Content, Header, Sider } = Layout;
 
 function App() {
-
     const { token } = theme.useToken();
 
     return (
@@ -21,11 +19,11 @@ function App() {
                 </Row>
             </Header>
             <Layout style={{ flex: 1 }}>
-                <Sider>
+                <Sider collapsible>
                     <NavigationMenu></NavigationMenu>
                 </Sider>
                 <Content style={{ overflowY: 'auto' }}>
-                    <RouterProvider router={ router }></RouterProvider>
+                    <Outlet></Outlet>
                 </Content>
             </Layout>
         </Layout>

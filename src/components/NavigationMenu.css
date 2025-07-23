@@ -1,0 +1,13 @@
+.ant-skeleton {
+    background: white;
+    height: 100%;
+    padding: 1rem;
+}
+
+.ant-menu {
+    height: 100%;
+}
+
+.ant-menu-item {
+    text-transform: capitalize;
+}

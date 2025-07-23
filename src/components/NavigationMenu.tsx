@@ -1,14 +1,65 @@
-import { Menu } from 'antd';
+import { Menu, Skeleton } from 'antd';
+import type { MenuProps } from 'antd';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { 
+    AudioOutlined, 
+    DesktopOutlined,
+    QuestionOutlined,
+    LaptopOutlined,
+    MobileOutlined,
+    ProductOutlined,
+    RocketOutlined,
+    ThunderboltOutlined
+} from '@ant-design/icons';
+import { useCategories } from '../hooks/useCategories';
+import './NavigationMenu.css';
 
-export function NavigationMenu() {
-    const items = ['menu1', 'menu2', 'menu3'];
+const itemAll = {
+    key: 'all',
+    label: 'all',
+    icon: <ProductOutlined />,
+};
+const iconsCategory: Record<string, any> = {
+    all: <ProductOutlined />,
+    appliances: <ThunderboltOutlined />,
+    audio: <AudioOutlined />,
+    gaming: <RocketOutlined />,
+    mobile: <MobileOutlined />,
+    laptop: <LaptopOutlined />,
+    tv: <DesktopOutlined />
+};
+
+export function NavigationMenu() {    
+    const [items, setItems] = useState<MenuProps['items']>([]);    
+    const [current, setCurrent]  = useState(itemAll.key);
+    const navigate = useNavigate();
+    const { categories, loading } = useCategories();
+
+    const handleClickItem: MenuProps['onClick'] = (e) => {
+        const nextPath = e.key === itemAll.key ? '/products': '/categories/' + e.key;
+
+        setCurrent(e.key);
+        navigate(nextPath);
+    };
+
+    useEffect(() => {
+        const itemsCategory = categories.map((category) => ({
+            key: category,
+            label: category,
+            icon: iconsCategory[category] ?? <QuestionOutlined />
+        }));
+        setItems([itemAll, ...itemsCategory]);
+    }, [categories]);
 
     return (
-        <Menu 
-            items={ items.map((item) => ({ key: item, label: item })) }
-            mode="inline" 
-            style={{ height: '100%' }}
+        <Skeleton 
+            active            
+            loading={ loading } 
+            paragraph={{ rows: 6, width: '100%' }} 
+            title={ false }
         >
-        </Menu>
-    )
+            <Menu items={ items } onClick={ handleClickItem } selectedKeys={ [current] }></Menu>
+        </Skeleton>
+    );
 }
