@@ -36,12 +36,15 @@ export function NavigationMenu() {
     const navigate = useNavigate();
     const { categories, loading } = useCategories();
 
-    const handleClickItem: MenuProps['onClick'] = (e) => {
-        const nextPath = e.key === itemAll.key ? '/products': '/categories/' + e.key;
-
-        setCurrent(e.key);
-        navigate(nextPath);
+    const handleClickItem: MenuProps['onClick'] = ({ key }) => {
+        setCurrent(key);
+        toNextRoute(key);
     };
+
+    function toNextRoute(key: string) {
+        const nextPath = key === itemAll.key ? '/products': '/categories/' + key;
+        navigate(nextPath);
+    }
 
     useEffect(() => {
         const itemsCategory = categories.map((category) => ({
@@ -50,6 +53,7 @@ export function NavigationMenu() {
             icon: iconsCategory[category] ?? <QuestionOutlined />
         }));
         setItems([itemAll, ...itemsCategory]);
+        toNextRoute(current);
     }, [categories]);
 
     return (

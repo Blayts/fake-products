@@ -10,15 +10,29 @@ export default createBrowserRouter([
         children: [
             {
                 path: 'categories/:category',
-                Component: ProductsList
-            },
-            {
-                path: 'product/:id',
-                Component: CardProduct
+                children: [
+                    {
+                        index: true,
+                        Component: ProductsList,
+                    },
+                    {
+                        path: 'product/:id',
+                        Component: CardProduct
+                    }
+                ]
             },
             {
                 path: 'products',
-                Component: ProductsList
+                children: [
+                    {
+                        index: true,
+                        Component: ProductsList
+                    },
+                    {
+                        path: 'product/:id',
+                        Component: CardProduct
+                    }
+                ]
             },
             {
                 path: '*',

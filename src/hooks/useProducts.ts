@@ -30,8 +30,20 @@ export function useProduct(id: number | string) {
     return { error, loading, product };
 }
 
-export function useProducts(page: number = 1) {
-    const loader = useCallback(() => fetch(API + `?page=${page}&limit=${LIMIT_ON_PAGE}`), [page]);
+export function useProducts(category: string = '', page: number = 1) {
+    const loader = useCallback(() => {
+        const path = API + (category ? '/category': '');
+        const params = new URLSearchParams({ 
+            limit: LIMIT_ON_PAGE.toString(), 
+            page: page.toString()
+        });
+
+        if(category) {
+            params.append('type', category);
+        }
+        
+        return fetch(path + '?' + params)
+    }, [category, page]);
     const { data, error, loading } = useFetch<ProductsResponse>(loader);
     const [products, setProducts] = useState<ProductValue[]>([]);
 

@@ -1,14 +1,16 @@
-import { useNavigate } from 'react-router';
+import { useNavigate, useLocation, useParams } from 'react-router';
 import { List } from 'antd';
 import { ProductItem } from './ProductItem';
 import { useProducts } from '../hooks/useProducts';
 
 export function ProductsList() {
-    const { products, loading } = useProducts();
+    const { category } = useParams();
+    const { products, loading } = useProducts(category);
     const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     function handleClick(id: number) {
-        navigate('/product/' + id);
+        navigate(pathname + '/product/' + id);
     }
 
     return (
