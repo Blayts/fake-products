@@ -31,7 +31,14 @@ export function useProduct(id: number | string) {
 }
 
 export function useProducts(category: string = '', page: number = 1) {
-    const loader = useCallback(() => {
+    const [path, setPath] = useState(getPath);
+    const [products, setProducts] = useState<ProductValue[]>([]);
+
+    const loader = useCallback(() => fetch(path), [path]);
+
+    const { data, error, loading } = useFetch<ProductsResponse>(loader);
+
+    function getPath() {
         const path = API + (category ? '/category': '');
         const params = new URLSearchParams({ 
             limit: LIMIT_ON_PAGE.toString(), 
@@ -41,11 +48,14 @@ export function useProducts(category: string = '', page: number = 1) {
         if(category) {
             params.append('type', category);
         }
-        
-        return fetch(path + '?' + params)
+        return path + '?' + params;
+    }
+
+    useEffect(() => {
+        const tout = setTimeout(() => setPath(getPath()), 100);
+
+        return () => clearTimeout(tout);
     }, [category, page]);
-    const { data, error, loading } = useFetch<ProductsResponse>(loader);
-    const [products, setProducts] = useState<ProductValue[]>([]);
 
     useEffect(() => {
         if(data) {

@@ -30,8 +30,8 @@ const iconsCategory: Record<string, any> = {
     tv: <DesktopOutlined />
 };
 
-export function NavigationMenu() {    
-    const [items, setItems] = useState<MenuProps['items']>([]);    
+export function NavigationMenu() {
+    const [items, setItems] = useState<MenuProps['items']>([]);
     const [current, setCurrent]  = useState(itemAll.key);
     const navigate = useNavigate();
     const { categories, loading } = useCategories();
