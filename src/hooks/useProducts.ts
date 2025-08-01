@@ -39,15 +39,21 @@ export function useProducts(category: string = '', page: number = 1) {
     const { data, error, loading } = useFetch<ProductsResponse>(loader);
 
     function getPath() {
-        const path = API + (category ? '/category': '');
         const params = new URLSearchParams({ 
-            limit: LIMIT_ON_PAGE.toString(), 
-            page: page.toString()
+            limit: LIMIT_ON_PAGE.toString(),
         });
 
+        let path = API;
+
         if(category) {
-            params.append('type', category);
+            path += '/category';
+            params.set('limit', (LIMIT_ON_PAGE * page).toString());
+            params.set('type', category);
         }
+        else {
+            params.append('page', page.toString());
+        }
+
         return path + '?' + params;
     }
 
@@ -58,9 +64,16 @@ export function useProducts(category: string = '', page: number = 1) {
     }, [category, page]);
 
     useEffect(() => {
-        if(data) {
+        if(!data) {
+            return;
+        }
+        
+        if(category || page === 1) {
             setProducts(data.products);
-        }        
+        }
+        else {
+            setProducts([...products, ...data.products]);
+        }
     }, [data]);
     
     return { error, loading, products };

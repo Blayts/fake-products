@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { UIEvent } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router';
 import { Alert, List } from 'antd';
@@ -16,15 +16,10 @@ export function ProductsList() {
     const [scrollValue, setScrollValue] = useState(1);
     const [page, setPage] = useState(1);
     const { products, loading } = useProducts(category, page);
-
-    const [listProducts, setListProducts] = useState<any[]>([]);
-    const productsById = listProducts.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
+    const wrapperRef = useRef<HTMLDivElement>(null);
 
     const changePage = useCallback(
-        debounce(() => {
-            console.log("LOAD")
-            setPage((page) => page + 1)
-        }, 500),
+        debounce(() => setPage((page) => page + 1), 500),
         []
     );
 
@@ -33,7 +28,7 @@ export function ProductsList() {
     }
 
     function handleScroll(e: UIEvent<HTMLDivElement>) {
-        if (loading || page >= LIMIT_PAGES || category) {
+        if (loading || page >= LIMIT_PAGES) {
             return;
         }
 
@@ -47,29 +42,14 @@ export function ProductsList() {
     }
 
     useEffect(() => {
-        setListProducts([]);
         setPage(1);
+        wrapperRef.current?.scrollTo({ top: 0 });
     }, [pathname]);
 
-    useEffect(() => {
-        const newProducts = products.filter((p) => !productsById[p.id]);
-
-        if(newProducts.length) {
-            setListProducts([...listProducts, ...newProducts]);
-        }
-    }, [products]);
-
     return (
-        <div className="products-wrapper" onScroll={handleScroll}>
-            {category && (
-                <Alert
-                    message="Pagination not available"
-                    showIcon
-                    type="warning"
-                ></Alert>
-            )}
+        <div className="products-wrapper" onScroll={handleScroll} ref={ wrapperRef }>
             <List loading={loading}>
-                {listProducts.map((product) => (
+                {products.map((product) => (
                     <List.Item
                         key={product.id}
                     >
