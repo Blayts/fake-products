@@ -1,13 +1,36 @@
-import { Card } from 'antd';
+import { Card, Col, Row } from 'antd';
 
-export function ProductItem({ product }: any) {
+type ProductItemProps = {
+    onClick(): void;
+    product: any;    
+};
+
+export function ProductItem({ onClick, product }: ProductItemProps) {
     return (
         <Card 
-            cover={ <img src={ product.image } /> } 
             hoverable
-            style={{ width: 240 }}
+            onClick={ onClick }
+            style={{ width: '50%' }}
+            title={ product.title }
         >
-            <Card.Meta title={ product.model } description={ product.title }></Card.Meta>
+            <Row>
+                <Col span={ 8 }>
+                    <Row>
+                        <img src={ product.image } style={{ width: '100%'}}></img>
+                    </Row>                    
+                </Col>
+                <Col offset={ 1 } span={15} style={{ padding: '20px' }}>
+                    <Row>
+                        <b>Model: { product.model }</b>
+                    </Row>
+                    <Row>
+                        <b>Color: { product.color }</b>
+                    </Row>
+                    <Row>
+                        <b>Price: { product.price }cu</b>
+                    </Row>
+                </Col>
+            </Row>
         </Card>
     )
 }

@@ -71,9 +71,8 @@ export function ProductsList() {
                 {listProducts.map((product) => (
                     <List.Item
                         key={product.id}
-                        onClick={() => handleClick(product.id)}
                     >
-                        <ProductItem product={product}></ProductItem>
+                        <ProductItem onClick={ () => handleClick(product.id) } product={product}></ProductItem>
                     </List.Item>
                 ))}
             </List>
