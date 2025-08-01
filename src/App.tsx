@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import { Col, Layout, Row, theme } from 'antd';
 import { MehOutlined } from '@ant-design/icons';
 import './App.css';
+import { NavigationBreadcrumb } from './components/NavigationBreadcrumb';
 import { NavigationMenu } from './components/NavigationMenu';
 
 const { Content, Header, Sider } = Layout;
@@ -22,7 +23,8 @@ function App() {
                 <Sider collapsible>
                     <NavigationMenu></NavigationMenu>
                 </Sider>
-                <Content style={{ overflowY: 'auto' }}>
+                <Content>
+                    <NavigationBreadcrumb></NavigationBreadcrumb>             
                     <Outlet></Outlet>
                 </Content>
             </Layout>

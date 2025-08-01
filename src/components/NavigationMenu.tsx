@@ -1,16 +1,16 @@
 import { Menu, Skeleton } from 'antd';
 import type { MenuProps } from 'antd';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
-import { 
-    AudioOutlined, 
+import { useNavigate, useParams } from 'react-router';
+import {
+    AudioOutlined,
     DesktopOutlined,
     QuestionOutlined,
     LaptopOutlined,
     MobileOutlined,
     ProductOutlined,
     RocketOutlined,
-    ThunderboltOutlined
+    ThunderboltOutlined,
 } from '@ant-design/icons';
 import { useCategories } from '../hooks/useCategories';
 import './NavigationMenu.css';
@@ -27,22 +27,25 @@ const iconsCategory: Record<string, any> = {
     gaming: <RocketOutlined />,
     mobile: <MobileOutlined />,
     laptop: <LaptopOutlined />,
-    tv: <DesktopOutlined />
+    tv: <DesktopOutlined />,
 };
 
 export function NavigationMenu() {
-    const [items, setItems] = useState<MenuProps['items']>([]);
-    const [current, setCurrent]  = useState(itemAll.key);
     const navigate = useNavigate();
+    const { category } = useParams();
+
+    const [items, setItems] = useState<MenuProps['items']>([]);
     const { categories, loading } = useCategories();
 
+    const defaultKey = category || itemAll.key;
+
     const handleClickItem: MenuProps['onClick'] = ({ key }) => {
-        setCurrent(key);
         toNextRoute(key);
     };
 
     function toNextRoute(key: string) {
-        const nextPath = key === itemAll.key ? '/products': '/categories/' + key;
+        const nextPath =
+            key === itemAll.key ? '/products' : '/categories/' + key;
         navigate(nextPath);
     }
 
@@ -50,20 +53,24 @@ export function NavigationMenu() {
         const itemsCategory = categories.map((category) => ({
             key: category,
             label: category,
-            icon: iconsCategory[category] ?? <QuestionOutlined />
+            icon: iconsCategory[category] ?? <QuestionOutlined />,
         }));
         setItems([itemAll, ...itemsCategory]);
-        toNextRoute(current);
+        toNextRoute(defaultKey);
     }, [categories]);
 
     return (
-        <Skeleton 
-            active            
-            loading={ loading } 
-            paragraph={{ rows: 6, width: '100%' }} 
-            title={ false }
+        <Skeleton
+            active
+            loading={loading}
+            paragraph={{ rows: 6, width: '100%' }}
+            title={false}
         >
-            <Menu items={ items } onClick={ handleClickItem } selectedKeys={ [current] }></Menu>
+            <Menu
+                items={items}
+                onClick={handleClickItem}
+                selectedKeys={[defaultKey]}
+            ></Menu>
         </Skeleton>
     );
 }

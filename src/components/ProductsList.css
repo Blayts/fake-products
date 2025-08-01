@@ -1,0 +1,9 @@
+.products-wrapper {
+    height: calc(100% - 38px);
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.products-wrapper .ant-list-item {
+    justify-content: center;
+}

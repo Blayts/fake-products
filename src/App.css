@@ -6,3 +6,7 @@
 #root > .ant-layout {
     height: inherit;
 }
+
+.ant-breadcrumb {
+    padding: 0.5rem;
+}
