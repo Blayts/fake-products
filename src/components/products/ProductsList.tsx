@@ -3,9 +3,9 @@ import type { UIEvent } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router';
 import { Alert, List } from 'antd';
 import { ProductItem } from './ProductItem';
-import { LIMIT_PAGES } from '../constants';
-import { useProducts } from '../hooks/useProducts';
-import { debounce } from '../utils';
+import { LIMIT_PAGES } from '../../constants/base';
+import { useProducts } from '../../hooks/useProducts';
+import { debounce } from '../../utils';
 import './ProductsList.css';
 
 export function ProductsList() {

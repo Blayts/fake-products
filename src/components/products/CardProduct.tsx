@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import { Card, Col, Image, Row } from 'antd';
-import { useProduct } from '../hooks/useProducts';
+import { useProduct } from '../../hooks/useProducts';
 
 export function CardProduct() {
     const { id } = useParams();
@@ -15,7 +15,7 @@ export function CardProduct() {
                 <Col offset={1} span={17}>
                     <h3>{product.title}</h3>
                     <p>{product.description}</p>
-                    <h4>Color: <span>{product.color}</span></h4>
+                    <h4>Color: <span style={{ textTransform: 'capitalize' }}>{product.color}</span></h4>
                     <h4>Price: {product.price}cu</h4>
                 </Col>
             </Row>

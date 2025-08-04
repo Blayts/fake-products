@@ -1,6 +1,6 @@
 import { Button, Drawer, Form, Input, Radio, Select } from 'antd';
 import { useState } from 'react';
-import { genders, optionsMood } from './constants';
+import { genders, optionsMood } from '../../constants/user';
 
 type UserFormProps = {
     onClose(): void;

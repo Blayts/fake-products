@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { genders, moods } from '../components/user/constants';
-import type { UserValue } from '../components/user/types';
+import { genders, moods } from '../constants/user';
+import type { UserValue } from '../types/user';
 
 const STORAGE_KEY = 'user';
 
@@ -39,9 +39,6 @@ const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        getUser(state) {
-            return state;
-        },        
         updateUser(state, { payload }: PayloadAction<UserValue>) {
             state.gender = payload.gender;
             state.mood = payload.mood;

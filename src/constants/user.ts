@@ -1,6 +1,6 @@
 import { FrownOutlined, MehOutlined, SmileOutlined } from '@ant-design/icons';
 import type { SelectProps } from 'antd';
-import type { GenderVariant, MoodValue, MoodVariant } from './types';
+import type { GenderVariant, MoodValue, MoodVariant } from '../types/user';
 
 export const genders: GenderVariant[] = ['female', 'male'];
 

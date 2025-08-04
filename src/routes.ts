@@ -1,7 +1,7 @@
 import { createBrowserRouter, redirect } from "react-router";
 import App from "./App";
-import { ProductsList } from './components/ProductsList';
-import { CardProduct } from './components/CardProduct';
+import { ProductsList } from './components/products/ProductsList';
+import { CardProduct } from './components/products/CardProduct';
 
 export default createBrowserRouter([    
     {

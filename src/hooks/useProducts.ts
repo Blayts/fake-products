@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useFetch } from './useFetch';
-import { BASE_API, LIMIT_ON_PAGE } from '../constants';
+import { BASE_API, LIMIT_ON_PAGE } from '../constants/base';
 
 type ProductValue = Record<string, any>;
 type ProductResponse = {

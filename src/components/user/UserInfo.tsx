@@ -1,15 +1,15 @@
 import { Button } from 'antd';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { genders, moods } from './constants';
+import { genders, moods } from '../../constants/user';
 import { UserForm } from './UserForm';
-import type { UserValue } from './types';
+import type { UserValue } from '../../types/user';
 import { selectUser, updateUser } from '../../slices/userSlice';
 
 export function UserInfo() {
     const [open, setOpen] = useState(false);
     const dispatch = useDispatch();
-    const user = useSelector(selectUser);
+    const user = useSelector(selectUser);    
     const { color, icon: Icon } = moods[user.mood] ?? moods.neutral;
 
     function handleSave(values: UserValue) {
