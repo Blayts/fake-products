@@ -1,9 +1,9 @@
-import { createBrowserRouter, redirect } from "react-router";
+import { createHashRouter, redirect } from "react-router";
 import App from "./App";
 import { ProductsList } from './components/products/ProductsList';
 import { CardProduct } from './components/products/CardProduct';
 
-export default createBrowserRouter([    
+export default createHashRouter([    
     {
         path: '/',
         Component: App,
