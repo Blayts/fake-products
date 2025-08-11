@@ -1,25 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useFetch } from './useFetch';
 import { BASE_API, LIMIT_ON_PAGE } from '../constants/base';
-
-type ProductValue = Record<string, any>;
-type ProductResponse = {
-    message: string;
-    product: ProductValue;
-    status: string;
-};
-type ProductsResponse = {
-    message: string;
-    products: ProductValue[];
-    status: string;
-};
+import type { ProductResponse, ProductValue, ProductsResponse } from '../types/product';
 
 const API = BASE_API + '/products';
 
 export function useProduct(id: number | string) {
     const loader = useCallback(() => fetch(API + `/${id}`), [id]);
     const { data, error, loading } = useFetch<ProductResponse>(loader);
-    const [product, setProduct] = useState<ProductValue>({});
+    const [product, setProduct] = useState<ProductValue | Record<string, any>>({});
 
     useEffect(() => {
         if(data) {

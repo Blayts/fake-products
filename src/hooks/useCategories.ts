@@ -1,13 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useFetch } from './useFetch';
 import { BASE_API } from '../constants/base';
-
-type CategoryValue = string;
-type CategoryResponse = {
-    message: string;
-    categories: CategoryValue[];
-    status: string;
-};
+import type { CategoryResponse, CategoryValue } from '../types/category';
 
 const API = BASE_API + '/products/category';
 
