@@ -1,12 +1,13 @@
 import { Button, Drawer, Form, Input, Radio, Select } from 'antd';
 import { useState } from 'react';
 import { genders, optionsMood } from '../../constants/user';
+import type { UserValue } from '../../types/user';
 
 type UserFormProps = {
     onClose(): void;
     onSave(values: Record<string, number | string>): void;
     open: boolean;
-    user: Record<string, number | string>;
+    user: UserValue;
 };
 
 export function UserForm({ onClose, onSave, open, user }: UserFormProps) {
@@ -28,10 +29,10 @@ export function UserForm({ onClose, onSave, open, user }: UserFormProps) {
                 labelCol={{ span: 4 }}
             >
                 <Form.Item label="Name" name="name">
-                    <Input maxLength={16}></Input>
+                    <Input aria-label="name-input" maxLength={16}></Input>
                 </Form.Item>           
                 <Form.Item label="Gender" name="gender">
-                    <Radio.Group>
+                    <Radio.Group aria-label="gender-group">
                         {genders.map((gender) => (
                             <Radio.Button key={gender} value={gender}>
                                 {gender}
@@ -40,7 +41,7 @@ export function UserForm({ onClose, onSave, open, user }: UserFormProps) {
                     </Radio.Group>
                 </Form.Item>
                 <Form.Item label="Mood" name="mood">
-                    <Select options={optionsMood}></Select>
+                    <Select aria-label="mood-input" options={optionsMood}></Select>
                 </Form.Item>
                 <Form.Item wrapperCol={{ offset: 4 }}>
                     <Button
