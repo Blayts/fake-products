@@ -15,7 +15,7 @@ export function UserInfo() {
     function handleSave(values: UserValue) {
         setOpen(false);
         dispatch(updateUser(values));
-    }    
+    }
 
     function WelcomeMessage() {
         return (

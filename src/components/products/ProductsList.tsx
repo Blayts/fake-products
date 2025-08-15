@@ -43,7 +43,7 @@ export function ProductsList() {
 
     useEffect(() => {
         setPage(1);
-        wrapperRef.current?.scrollTo({ top: 0 });
+        wrapperRef.current?.scrollTo?.({ top: 0 });
     }, [pathname]);
 
     return (

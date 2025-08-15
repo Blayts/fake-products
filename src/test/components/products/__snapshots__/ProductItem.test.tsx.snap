@@ -1,0 +1,74 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Render product item > Snapshot test 1`] = `
+<div>
+  <div
+    class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+    style="width: 50%;"
+  >
+    <div
+      class="ant-card-head"
+    >
+      <div
+        class="ant-card-head-wrapper"
+      >
+        <div
+          class="ant-card-head-title"
+        >
+          Title #1
+        </div>
+      </div>
+    </div>
+    <div
+      class="ant-card-body"
+    >
+      <div
+        class="ant-row css-dev-only-do-not-override-7t2xvq"
+      >
+        <div
+          class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+        >
+          <div
+            class="ant-row css-dev-only-do-not-override-7t2xvq"
+          >
+            <img
+              src="Image #1"
+              style="width: 100%;"
+            />
+          </div>
+        </div>
+        <div
+          class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+          style="padding: 20px;"
+        >
+          <div
+            class="ant-row css-dev-only-do-not-override-7t2xvq"
+          >
+            <b>
+              Model: 
+              Model #1
+            </b>
+          </div>
+          <div
+            class="ant-row css-dev-only-do-not-override-7t2xvq"
+          >
+            <b>
+              Color: 
+              Color #1
+            </b>
+          </div>
+          <div
+            class="ant-row css-dev-only-do-not-override-7t2xvq"
+          >
+            <b>
+              Price: 
+              100
+              cu
+            </b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

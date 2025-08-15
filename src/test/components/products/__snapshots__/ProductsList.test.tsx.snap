@@ -1,0 +1,763 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Render Products list > Snapshot test 1`] = `
+<div>
+  <div
+    class="products-wrapper"
+  >
+    <div
+      class="ant-list ant-list-split css-dev-only-do-not-override-7t2xvq"
+    >
+      <div
+        class="ant-spin-nested-loading css-dev-only-do-not-override-7t2xvq"
+      >
+        <div
+          class="ant-spin-container"
+        >
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #1
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #1"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #1
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #1
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        100
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #2
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #2"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #2
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #2
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        200
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #3"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #3
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #3
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        300
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #4
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #4"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #4
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #4
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        400
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #5
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #5"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #5
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #5
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        500
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render product list > Snapshot test 1`] = `
+<div>
+  <div
+    class="products-wrapper"
+  >
+    <div
+      class="ant-list ant-list-split css-dev-only-do-not-override-7t2xvq"
+    >
+      <div
+        class="ant-spin-nested-loading css-dev-only-do-not-override-7t2xvq"
+      >
+        <div
+          class="ant-spin-container"
+        >
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #1
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #1"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #1
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #1
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        100
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #2
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #2"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #2
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #2
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        200
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #3"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #3
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #3
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        300
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #4
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #4"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #4
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #4
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        400
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="ant-list-item"
+          >
+            <div
+              class="ant-card ant-card-bordered ant-card-hoverable css-dev-only-do-not-override-7t2xvq"
+              style="width: 50%;"
+            >
+              <div
+                class="ant-card-head"
+              >
+                <div
+                  class="ant-card-head-wrapper"
+                >
+                  <div
+                    class="ant-card-head-title"
+                  >
+                    Title #5
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-card-body"
+              >
+                <div
+                  class="ant-row css-dev-only-do-not-override-7t2xvq"
+                >
+                  <div
+                    class="ant-col ant-col-8 css-dev-only-do-not-override-7t2xvq"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <img
+                        src="Image #5"
+                        style="width: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="ant-col ant-col-15 ant-col-offset-1 css-dev-only-do-not-override-7t2xvq"
+                    style="padding: 20px;"
+                  >
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Model: 
+                        Model #5
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Color: 
+                        Color #5
+                      </b>
+                    </div>
+                    <div
+                      class="ant-row css-dev-only-do-not-override-7t2xvq"
+                    >
+                      <b>
+                        Price: 
+                        500
+                        cu
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
